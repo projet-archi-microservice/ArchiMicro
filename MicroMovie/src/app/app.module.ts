@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { RecomendationComponent } from './recomendation/recomendation.component';
 import { Err404Component } from './err404/err404.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PreferencesComponent } from './preferences/preferences.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecomendationComponent,
-    Err404Component
+    Err404Component,
+    PreferencesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
