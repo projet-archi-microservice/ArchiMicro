@@ -8,13 +8,17 @@ import { Err404Component } from './err404/err404.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule } from '@angular/forms';
+import { GoutComponent } from './user-profile/gout/gout.component';
+import { RechercheComponent } from './user-profile/gout/recherche/recherche.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecomendationComponent,
     Err404Component,
-    UserProfileComponent
+    UserProfileComponent,
+    GoutComponent,
+    RechercheComponent
   ],
   imports: [
     BrowserModule,
