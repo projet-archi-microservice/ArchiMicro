@@ -1,9 +1,13 @@
-<p>recomendation works!</p>
 <div class="card">
     <h2>Bienvenu!</h2>
     <p>Voici quelques recomendations de films pour vous!</p>
 </div>
-<div *ngFor= "let m of movie">
-    <h1> {{ m.name }} </h1>
-    <img src="https://image.tmdb.org/t/p/w500/{{ m.poster_path }}">
+<div class="list">
+    <div *ngFor= "let m of movie" class="card">
+        <h1> {{ m.name }} </h1>
+        <img src="https://image.tmdb.org/t/p/w500/{{ m.poster_path }}">
+        <span *ngFor= "let g of m.genres" class="card">
+            <p>{{ g.name }}, </p>
+        </span>
+    </div>
 </div>
