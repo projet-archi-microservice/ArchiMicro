@@ -1,0 +1,26 @@
+[
+    {
+        "adult":false,
+        "name":"Mad Max Collection",
+        "genres":[{"id":18,"name":"Drama"},{"id":53,"name":"Thriller"}],
+        "poster_path":"/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
+    },
+    {
+        "adult":false,
+        "name":"Mario Le Film",
+        "genres":[{"id":18,"name":"Drama"},{"id":53,"name":"Thriller"}],
+        "poster_path":"/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
+    },
+    {
+        "adult":false,
+        "name":"Sonic Le Film",
+        "genres":[{"id":18,"name":"Drama"},{"id":53,"name":"Thriller"}],
+        "poster_path":"/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
+    },
+    {
+        "adult":false,
+        "name":"Detective Pikachu",
+        "genres":[{"id":18,"name":"Drama"},{"id":53,"name":"Thriller"}],
+        "poster_path":"/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
+    }
+]

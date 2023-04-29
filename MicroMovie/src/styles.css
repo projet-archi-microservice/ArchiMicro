@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: blueviolet;
+}
+
+.card {
+    background-color: slateblue;
+    border: 1px solid slateblue;
+    color:white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.list-container {
+    display: flex;
+}
+
+.list {
+    flex-basis: fit-content;
+}
+
+.list .card {
+    width: 30%;
+    margin-right: 10px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.list .card img {
+    width: 100%;
+    height: auto;
+}
+
+.list .card.active {
+    border: 1px solid gold;
+    color: gold;
+}
