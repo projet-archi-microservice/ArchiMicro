@@ -6,15 +6,23 @@ import { AppComponent } from './app.component';
 import { RecomendationComponent } from './recomendation/recomendation.component';
 import { Err404Component } from './err404/err404.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PreferencesComponent } from './preferences/preferences.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule } from '@angular/forms';
+import { GoutComponent } from './user-profile/gout/gout.component';
+import { RechercheComponent } from './user-profile/gout/recherche/recherche.component';
+import { PreferencesComponent } from './preferences/preferences.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RecomendationComponent,
     Err404Component,
+    UserProfileComponent,
+    GoutComponent,
+    RechercheComponent,
     PreferencesComponent
+
   ],
   imports: [
     BrowserModule,
