@@ -1,38 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-    background-color: blueviolet;
-}
-
+/* main styles */
 .card {
-    background-color: slateblue;
-    border: 1px solid slateblue;
-    color:white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-
-.list-container {
-    display: flex;
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .list {
-    flex-basis: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.list .card {
-    width: 30%;
-    margin-right: 10px;
-    float: left;
-    margin-bottom: 10px;
-}
-
-.list .card img {
+/* responsive styles */
+@media (max-width: 768px) {
+  .list {
+    flex-direction: column;
+  }
+  .card {
     width: 100%;
-    height: auto;
+  }
 }
 
-.list .card.active {
-    border: 1px solid gold;
-    color: gold;
+/* movie-specific styles */
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* dark theme */
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+.card {
+  background-color: #333;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.25);
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Movie} from '../modeles/movie';
+import { Movie, movies} from '../modeles/movie';
 import { RecomendationService } from '../recomendation.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class RecomendationComponent {
   }
 
   ngOnInit(): void {
-    this.movies = this.recommandationService.getJsonDataResult();
+    this.movies = movies;
     console.log(this.movies)
   }
 }
