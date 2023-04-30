@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import _movies from './modeles/movie.json';
-import { Movie } from './modeles/movie';
+import _movies from '../modeles/movie.json';
+import { Movie } from '../modeles/movie';
 @Injectable({
   providedIn: 'root'
 })

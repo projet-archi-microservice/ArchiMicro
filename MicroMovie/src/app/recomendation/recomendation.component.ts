@@ -19,7 +19,7 @@ export class RecomendationComponent {
   }
 
   async getMovies() {
-    this.movies = await this.recommandationService.getJsonDataResult();
+    this.movies =  await this.recommandationService.getJsonDataResult();
     console.log(this.movies)
   }
 }
