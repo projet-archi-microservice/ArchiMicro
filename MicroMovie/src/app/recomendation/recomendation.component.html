@@ -1,13 +1,13 @@
 <div class="card">
-    <h2>Bienvenu!</h2>
-    <p>Voici quelques recomendations de films pour vous!</p>
+  <h2>Bienvenue!</h2>
+  <p>Voici quelques recommandations de films pour vous!</p>
 </div>
 <div class="list">
-    <div *ngFor= "let m of movie" class="card">
-        <h1> {{ m.name }} </h1>
-        <img src="https://image.tmdb.org/t/p/w500/{{ m.poster_path }}">
-        <span *ngFor= "let g of m.genres" class="card">
-            <p>{{ g.name }}, </p>
-        </span>
-    </div>
+  <div *ngFor="let movie of movies" class="card">
+    <h1>{{ movie.title }}</h1>
+    <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}">
+    <p>Date de sortie: {{ movie.release_date }}</p>
+    <p>Note: {{ movie.vote_average }}/10</p>
+  </div>
 </div>
+

@@ -8,7 +8,7 @@ import { Movie } from 'src/app/modeles/movie';
 })
 export class GoutComponent {
   moviesVus: Movie[] = []
-  movieEnCours: Movie = {"name":"erreur", "adult":false, "genres":[],"poster_path":""}
+  movieEnCours: Movie = {"id":0,"title":"erreur", "genre_ids":[],"poster_path":"","release_date":"","vote_average":0}
   numeroMovieEnCours: number =0;
 
   ngOnInit(): void {
@@ -17,7 +17,7 @@ export class GoutComponent {
     if (this.moviesVus.length==0) {
       //panik pas de film
     } else {
-      this.movieEnCours = this.moviesVus[0];      
+      this.movieEnCours = this.moviesVus[0];
     }
 
   }
@@ -27,7 +27,7 @@ export class GoutComponent {
       this.numeroMovieEnCours = this.moviesVus.length
     } else {
       this.numeroMovieEnCours--
-      this.numeroMovieEnCours = this.numeroMovieEnCours%this.moviesVus.length  
+      this.numeroMovieEnCours = this.numeroMovieEnCours%this.moviesVus.length
     }
     this.movieEnCours = this.moviesVus[this.numeroMovieEnCours]
   }

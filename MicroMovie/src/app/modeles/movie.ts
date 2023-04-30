@@ -1,15 +1,15 @@
 import _movies from './movie.json';
 
 export interface Movie {
-    adult:boolean;
-    name:string;
-    genres:Genre[];
+    id:number;
+    title:string;
+    genre_ids:Genre[];
     poster_path:string;
+    release_date:string;
+    vote_average:number;
 }
 
 export interface Genre {
     id: number;
     name: string;
 }
-
-export const movies = _movies as Movie[];
