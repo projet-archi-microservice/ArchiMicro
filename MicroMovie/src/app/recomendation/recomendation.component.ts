@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Movie, movies} from '../modeles/movie';
-import { RecomendationService } from '../recomendation.service';
+import { RecomendationService } from '../services/recomendation.service';
 
 @Component({
   selector: 'app-recomendation',

@@ -2,6 +2,7 @@
     {
         "id":1,
         "nom":"Thot",
-        "email":"thot@toto.com"
+        "email":"thot@toto.com",
+        "password":"totototo"
     }
 ]
