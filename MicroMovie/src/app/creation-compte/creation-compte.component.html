@@ -1,4 +1,3 @@
-<p>creation-compte works!</p>
 <div>
     <label for="nouveauNom">Choisi ton nom de champion (tu pourras pas le changer)</label>
     <input [(ngModel)]="nouveauNom" type="text">
@@ -15,3 +14,4 @@
     Et maintenant tu 
     <button (click)="onValidation()">Enregistre</button> !
 </div>
+<p [(ngModel)]="errorMsg"></p>

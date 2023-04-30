@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { UserServiceService } from '../services/user-service.service';
+import { User } from '../modeles/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-creation-compte',
@@ -7,14 +9,19 @@ import { UserServiceService } from '../services/user-service.service';
   styleUrls: ['./creation-compte.component.css']
 })
 export class CreationCompteComponent {
-  nouveauNom: String = ""
-  nouveauMDP: String = ""
-  nouveauEmail: String = ""
+  nouveauNom: string = ""
+  nouveauMDP: string = ""
+  nouveauEmail: string = ""
 
-  constructor(public userService: UserServiceService){}
+  errorMsg: string = "";
+
+
+  constructor(public userService: UserServiceService, private router: Router){}
 
 
   public onValidation(){
-    this.userService.login(this.nouveauNom, this.nouveauMDP)
+    const user : User = {id : 0, nom : this.nouveauNom, email : this.nouveauEmail, password : this.nouveauMDP };
+    var response = JSON.stringify(this.userService.enregistrerUser(user))
+    this.router.navigate(['/login']);
   }
 }

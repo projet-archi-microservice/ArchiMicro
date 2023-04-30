@@ -13,7 +13,7 @@ export class RecomendationService {
   }
 
   public async getJsonDataResult(){
-    await this.http.get('http://127.0.0.1:8000/').subscribe((res) => {
+    await this.http.get(process.env['API_HOST']+'').subscribe((res) => {
       Object.values(res)[1].forEach((mov: any) => {
         this.jsonDataResult.push(mov as Movie)
       });
