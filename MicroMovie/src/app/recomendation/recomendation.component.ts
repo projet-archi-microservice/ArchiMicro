@@ -14,8 +14,12 @@ export class RecomendationComponent {
     this.movies = [];
   }
 
-  ngOnInit(): void {
-    this.movies = movies;
+  async ngOnInit() {
+    this.getMovies()
+  }
+
+  async getMovies() {
+    this.movies = await this.recommandationService.getJsonDataResult();
     console.log(this.movies)
   }
 }

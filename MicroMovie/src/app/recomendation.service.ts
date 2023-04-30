@@ -1,21 +1,26 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import _movies from './modeles/movie.json';
+import { Movie } from './modeles/movie';
 @Injectable({
   providedIn: 'root'
 })
 export class RecomendationService {
-  jsonDataResult: any;
+  jsonDataResult : Movie[];
 
   constructor(private http: HttpClient) {
-      this.http.get('http://127.0.0.1:8000/').subscribe((res) => {
-        this.jsonDataResult = res;
-        console.log('--- result :: ',  this.jsonDataResult);
-      });
+    this.jsonDataResult = [];
   }
 
-  public getJsonDataResult(){
+  public async getJsonDataResult(){
+    await this.http.get('http://127.0.0.1:8000/').subscribe((res) => {
+      Object.values(res)[1].forEach((mov: any) => {
+        this.jsonDataResult.push(mov as Movie)
+      });
+      console.log(this.jsonDataResult)
+    });
+
+    console.log(this.jsonDataResult);
     return this.jsonDataResult;
   }
 }
