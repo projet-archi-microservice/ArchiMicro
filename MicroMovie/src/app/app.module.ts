@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { GoutComponent } from './user-profile/gout/gout.component';
 import { RechercheComponent } from './user-profile/gout/recherche/recherche.component';
 import { PreferencesComponent } from './preferences/preferences.component';
+import { AuthentificationComponent } from './authentification/authentification.component';
+import { CreationCompteComponent } from './creation-compte/creation-compte.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { PreferencesComponent } from './preferences/preferences.component';
     UserProfileComponent,
     GoutComponent,
     RechercheComponent,
-    PreferencesComponent
+    PreferencesComponent,
+    AuthentificationComponent,
+    CreationCompteComponent
 
   ],
   imports: [
